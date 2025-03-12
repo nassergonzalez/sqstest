@@ -1,7 +1,5 @@
 module "sqs" {
   source  = "qa.harness.io/25NKDX79QPC-YTyninmxRQ/zmodule/test"
-  region = "us-east-1"
-
   name = "fifo"
 
   fifo_queue = true
@@ -9,4 +7,8 @@ module "sqs" {
   tags = {
     Environment = "dev"
   }
+}
+
+provider "aws" {
+  region = "us-east-1"
 }
